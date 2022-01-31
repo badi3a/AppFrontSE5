@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
         price: 15,
         nbrLike: 0,
         quantity: 10,
-        picture: 'assets/t-shirt2.jpeg'},
+        picture: 'assets/image/t-shirt1.jpg'},
 
       { id: 2,
         name: 'T-shirt 2',
@@ -30,14 +30,14 @@ export class ProductListComponent implements OnInit {
         price: 15,
         nbrLike: 0,
         quantity: 10,
-        picture: 'assets/t-shirt1.jpeg'},
+        picture: 'assets/image/t-shirt1.jpg'},
       { id: 3,
         name: 'T-shirt 3',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias cupiditate deserunt dignissimos dolorem.',
         price: 15,
         nbrLike: 0,
         quantity: 0,
-        picture: 'assets/t-shirt2.jpeg'}
+        picture: 'assets/image/t-shirt1.jpg'}
     ]
   }
 
