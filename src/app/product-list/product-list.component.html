@@ -1,8 +1,17 @@
 <h1>{{title}}</h1>
+<div class="form-group col-md-3 ">
+  <label>Search</label>
+  <input class="form-control" name="price" type="number"
+         placeholder="search by price" [(ngModel)]="priceMax">
+</div>
+<br>
+
+
 <div class="row">
   <div class="col-md-3" *ngFor="let product of listProduct,
-   let i=index">
-    <div class="card" style="width: 18rem;">
+   let i=index" >
+    <div  *ngIf="product.price<priceMax || priceMax==null">
+     <div class="card" style="width: 18rem;">
       <img src="{{product.picture}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{product.name}}</h5>
@@ -29,6 +38,7 @@
         </button>
         ----->
       </div>
+    </div>
     </div>
   </div>
 </div>

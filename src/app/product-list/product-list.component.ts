@@ -10,6 +10,7 @@ import {Product} from "../core/model/product";
 export class ProductListComponent implements OnInit {
   title: string;
   listProduct: Product[] ;
+  priceMax: number;
   constructor() {
   }
 
@@ -19,7 +20,7 @@ export class ProductListComponent implements OnInit {
       { id: 1,
         name: 'T-shirt 1',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias cupiditate deserunt dignissimos dolorem.',
-        price: 15,
+        price: 150,
         nbrLike: 0,
         quantity: 10,
         picture: 'assets/image/t-shirt1.jpg'},
@@ -33,7 +34,7 @@ export class ProductListComponent implements OnInit {
       { id: 3,
         name: 'T-shirt 3',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias cupiditate deserunt dignissimos dolorem.',
-        price: 15,
+        price: 65,
         nbrLike: 0,
         quantity: 0,
         picture: 'assets/image/t-shirt1.jpg'}
@@ -42,7 +43,7 @@ export class ProductListComponent implements OnInit {
 
   incrementLike(i:number):void{
     console.log("hi")
-    //
+    //use webServiceREST to persist data in the backEnd side
     this.listProduct[i].nbrLike++;
   }
 }
