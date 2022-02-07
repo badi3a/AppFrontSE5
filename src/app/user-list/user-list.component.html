@@ -1,0 +1,31 @@
+<h1>Users List</h1>
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>email</th>
+    <th>role</th>
+    <th>action</th>
+  </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let user of listUser, let i=index">
+     <td>{{user.id}}</td>
+     <td>{{user.name}}</td>
+     <td>{{user.username}}</td>
+     <td>{{user.email}}</td>
+     <td>{{user.role}}</td>
+     <td>
+       <button class="bn btn-sm btn-danger"
+               (click)="delete(i)"
+               [hidden]="user.role=='admin'">
+         delete
+       </button>
+       &nbsp;
+       <button class="btn btn-sm btn-info">show user</button>
+     </td>
+   </tr>
+  </tbody>
+</table>
