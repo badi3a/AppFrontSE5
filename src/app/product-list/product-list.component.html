@@ -11,9 +11,19 @@
         <button class="btn btn-sm btn-warning" id="buy" [disabled]="product.quantity==0">
           buy Product
         </button>
+      <!-----
+      ----
+      *ngIf => A structural directive that conditionally includes a template based on the value of an expression coerced to Boolean.
+      When the expression evaluates to true, Angular renders the template provided in a then clause, and when false or null,
+      Angular renders the template provided in an optional else clause.
+         The default template for the else clause is blank.
+         -------
+         example
+         -------
         <button class="btn btn-sm btn-warning"  *ngIf="product.quantity==0">
           buy Product ngIF
         </button>
+        ----->
       </div>
     </div>
   </div>
