@@ -9,7 +9,7 @@ import {Product} from "../core/model/product";
 
 export class ProductListComponent implements OnInit {
   title: string;
-  listProduct: Product[];
+  listProduct: Product[] ;
   constructor() {
   }
 
@@ -23,7 +23,6 @@ export class ProductListComponent implements OnInit {
         nbrLike: 0,
         quantity: 10,
         picture: 'assets/image/t-shirt1.jpg'},
-
       { id: 2,
         name: 'T-shirt 2',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias cupiditate deserunt dignissimos dolorem.',
@@ -41,4 +40,9 @@ export class ProductListComponent implements OnInit {
     ]
   }
 
+  incrementLike(i:number):void{
+    console.log("hi")
+    //
+    this.listProduct[i].nbrLike++;
+  }
 }

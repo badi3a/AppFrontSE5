@@ -1,14 +1,18 @@
 <h1>{{title}}</h1>
 <div class="row">
-  <div class="col-md-3" *ngFor="let product of listProduct">
+  <div class="col-md-3" *ngFor="let product of listProduct,
+   let i=index">
     <div class="card" style="width: 18rem;">
       <img src="{{product.picture}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{product.name}}</h5>
         <p class="card-text">{{product.description}}</p>
         <p class="card-text">{{product.price}}</p>
-        <button class="btn btn-sm btn-primary">like {{product.nbrLike}}</button>
-        <button class="btn btn-sm btn-warning" id="buy" [disabled]="product.quantity==0">
+        <button class="btn btn-sm btn-primary" (click)="incrementLike(i)">
+          {{product.nbrLike}} like<3
+        </button>
+        <button class="btn btn-sm btn-warning" id="buy"
+                [disabled]="product.quantity==0">
           buy Product
         </button>
       <!-----
