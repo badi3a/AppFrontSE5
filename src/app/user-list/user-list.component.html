@@ -24,7 +24,9 @@
          delete
        </button>
        &nbsp;
-       <button class="btn btn-sm btn-info">show user</button>
+       <a class="btn btn-sm btn-info" [routerLink]="['/user',user.id]">
+         show user
+       </a>
      </td>
    </tr>
   </tbody>
