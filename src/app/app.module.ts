@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import {FormsModule} from "@angular/forms";
 import { UserListComponent } from './user-list/user-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BestSellerComponent } from './best-seller/best-seller.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     ProductListComponent,
     FooterComponent,
-    UserListComponent
+    UserListComponent,
+    BestSellerComponent
   ],
   imports: [
     BrowserModule,
