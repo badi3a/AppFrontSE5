@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from "../core/model/product";
 
 @Component({
@@ -9,13 +9,14 @@ import {Product} from "../core/model/product";
 export class ProductComponent implements OnInit {
   @Input() product:Product;
   @Input() priceMax:number;
+  @Output() likeNotification= new EventEmitter<Product>()
   constructor() { }
-
   ngOnInit(): void {
 
   }
-  incrementLike(product:Product){
-
+  incrementLikeNotification(product:Product){
+    //notify the parent component
+    this.likeNotification.emit(product)
   }
 
 }

@@ -40,10 +40,13 @@ export class ProductListComponent implements OnInit {
         picture: 'assets/image/t-shirt1.jpg'}
     ]
   }
-
-  incrementLike(i:number):void{
+  incrementLike(product: Product):void{
     console.log("hi")
     //use webServiceREST to persist data in the backEnd side
-    this.listProduct[i].nbrLike++;
+    //
+    let i = this.listProduct.indexOf(product);
+    if(i!=-1){
+      this.listProduct[i].nbrLike++;
+    }
   }
 }
