@@ -8,37 +8,5 @@
 
 
 <div class="row">
-  <div class="col-md-3" *ngFor="let product of listProduct,
-   let i=index" >
-    <div  *ngIf="product.price<priceMax || priceMax==null">
-     <div class="card" style="width: 18rem;">
-      <img src="{{product.picture}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{product.name}}</h5>
-        <p class="card-text">{{product.description}}</p>
-        <p class="card-text">{{product.price}}</p>
-        <button class="btn btn-sm btn-primary" (click)="incrementLike(i)">
-          {{product.nbrLike}} like<3
-        </button>
-        <button class="btn btn-sm btn-warning" id="buy"
-                [disabled]="product.quantity==0">
-          buy Product
-        </button>
-      <!-----
-      ----
-      *ngIf => A structural directive that conditionally includes a template based on the value of an expression coerced to Boolean.
-      When the expression evaluates to true, Angular renders the template provided in a then clause, and when false or null,
-      Angular renders the template provided in an optional else clause.
-         The default template for the else clause is blank.
-         -------
-         example
-         -------
-        <button class="btn btn-sm btn-warning"  *ngIf="product.quantity==0">
-          buy Product ngIF
-        </button>
-        ----->
-      </div>
-    </div>
-    </div>
-  </div>
+
 </div>
