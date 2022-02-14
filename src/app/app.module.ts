@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import { UserListComponent } from './user-list/user-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BestSellerComponent } from './best-seller/best-seller.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BestSellerComponent } from './best-seller/best-seller.component';
     ProductListComponent,
     FooterComponent,
     UserListComponent,
-    BestSellerComponent
+    BestSellerComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
