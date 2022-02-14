@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Product} from "../core/model/product";
 
 @Component({
@@ -7,10 +7,12 @@ import {Product} from "../core/model/product";
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  product:Product;
+  @Input() product:Product;
+  @Input() priceMax:number;
   constructor() { }
 
   ngOnInit(): void {
+
   }
   incrementLike(product:Product){
 

@@ -5,8 +5,9 @@
          placeholder="search by price" [(ngModel)]="priceMax">
 </div>
 <br>
-
-
 <div class="row">
+  <app-product *ngFor="let pObject of listProduct"
+               [product]="pObject" [priceMax]="priceMax">
 
+  </app-product>
 </div>

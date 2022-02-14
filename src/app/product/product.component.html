@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3" *ngIf="product.quantity<priceMax || priceMax==null">
   <div class="card" style="width: 18rem;">
     <img src="{{product.picture}}" class="card-img-top" alt="...">
     <div class="card-body">
