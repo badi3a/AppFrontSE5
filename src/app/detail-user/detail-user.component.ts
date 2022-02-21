@@ -9,10 +9,10 @@ import {ActivatedRoute} from "@angular/router";
 export class DetailUserComponent implements OnInit {
   idUser: number;
   constructor(private route: ActivatedRoute) { }
-
   ngOnInit(): void {
     this.idUser= this.route.snapshot.params['id'];
     //we will use it later to communicate with the backend
+
   }
 
 }
