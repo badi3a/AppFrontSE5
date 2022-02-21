@@ -1,15 +1,24 @@
 <h1>{{title}}</h1>
-<div class="form-group col-md-3 ">
-  <label>Search</label>
-  <input class="form-control" name="price" type="number"
-         placeholder="search by price" [(ngModel)]="priceMax">
-</div>
+<button class="btn btn-warning" (click)="showForm()">
+  add Product
+</button>
 <br>
-<div class="row">
-  <app-product *ngFor="let pObject of listProduct"
-               [product]="pObject" [priceMax]="priceMax"
-               (likeNotification)="incrementLike($event)"
-               class="col-md-3">
+<app-add-product *ngIf="show"></app-add-product>
+<br>
 
-  </app-product>
+<div [hidden]="show">
+  <div class="form-group col-md-3 ">
+    <label>Search</label>
+    <input class="form-control" name="price" type="number"
+           placeholder="search by price" [(ngModel)]="priceMax">
+  </div>
+  <br>
+  <div class="row">
+    <app-product *ngFor="let pObject of listProduct"
+                 [product]="pObject" [priceMax]="priceMax"
+                 (likeNotification)="incrementLike($event)"
+                 class="col-md-3">
+
+    </app-product>
+  </div>
 </div>

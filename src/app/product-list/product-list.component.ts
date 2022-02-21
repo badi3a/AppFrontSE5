@@ -11,11 +11,13 @@ export class ProductListComponent implements OnInit {
   title: string;
   listProduct: Product[] ;
   priceMax: number;
+  show:boolean;
   constructor() {
   }
 
   ngOnInit(): void {
     this.title="MyApp Store";
+    this.show = false;
     this.listProduct=[
       { id: 1,
         name: 'T-shirt 1',
@@ -48,5 +50,8 @@ export class ProductListComponent implements OnInit {
     if(i!=-1){
       this.listProduct[i].nbrLike++;
     }
+  }
+  showForm(): void{
+    this.show = true;
   }
 }

@@ -12,6 +12,7 @@ import { BestSellerComponent } from './best-seller/best-seller.component';
 import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailUserComponent } from './detail-user/detail-user.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DetailUserComponent } from './detail-user/detail-user.component';
     BestSellerComponent,
     ProductComponent,
     NotFoundComponent,
-    DetailUserComponent
+    DetailUserComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
