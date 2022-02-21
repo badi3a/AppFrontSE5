@@ -54,4 +54,8 @@ export class ProductListComponent implements OnInit {
   showForm(): void{
     this.show = true;
   }
+  saveProduct(p:Product){
+    this.listProduct.push(p);
+    this.show=false;
+  }
 }

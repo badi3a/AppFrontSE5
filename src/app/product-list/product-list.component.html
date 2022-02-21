@@ -3,7 +3,7 @@
   add Product
 </button>
 <br>
-<app-add-product *ngIf="show"></app-add-product>
+<app-add-product *ngIf="show" (eventAddProduct)="saveProduct($event)"></app-add-product>
 <br>
 
 <div [hidden]="show">

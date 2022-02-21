@@ -1,1 +1,34 @@
-<p>add-product works!</p>
+<h1>FORM: Add a new Product</h1>
+<form #f="ngForm">
+  <div class="form-group">
+    <label>
+      Name:
+    </label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="product.name"
+           required minlength="3" pattern="^[a-zA-Z]+$" #n="ngModel">
+  </div>
+  <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
+    <div *ngIf="n.errors?.required">This field is required</div>
+    <div *ngIf="n.errors?.minlength">Minlength is equal to 3</div>
+    <div *ngIf="n.errors?.pattern">error pattern</div>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" name="description" class="form-control" [(ngModel)]="product.description">
+  </div>
+  <div class="form-group">
+    <label>Price</label>
+    <input type="text" name="price" class="form-control" [(ngModel)]="product.price">
+  </div>
+  <div class="form-group">
+    <label>quantity</label>
+    <input type="text" name="quantity" class="form-control" [(ngModel)]="product.quantity">
+  </div>
+  <div class="form-group">
+    <label>Picture</label>
+    <input type="text" name="picture" class="form-control" [(ngModel)]="product.picture">
+  </div>
+  <br>
+  <button class="btn btn-success" [disabled]="f.invalid" (click)="save()">save</button>
+</form>
+
