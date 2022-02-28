@@ -1,4 +1,9 @@
 <h1>{{title}}</h1>
+
+<div class="alert alert-danger" *ngIf="stockAlert!=0">
+  warning: {{stockAlert}} out of stock
+</div>
+
 <button class="btn btn-warning" (click)="showForm()">
   add Product
 </button>
