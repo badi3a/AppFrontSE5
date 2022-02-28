@@ -1,4 +1,13 @@
 <h1>Users List</h1>
+
+<button class="btn btn-sm btn-outline-info" (click)="getNumber()">
+  Show Admin number
+</button>
+<br><br>
+<div class="alert alert-info" *ngIf="countAdmin!=null">
+  the Admin number: {{countAdmin}}
+</div>
+
 <table class="table table-striped">
   <thead class="thead-dark">
   <tr>
