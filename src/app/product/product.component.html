@@ -5,10 +5,14 @@
       <h5 class="card-title">{{product.name}}</h5>
       <p class="card-text">{{product.description}}</p>
       <p class="card-text">{{product.price}}</p>
+      <button class="btn btn-outline-danger"
+      (click)="delete(product)" >delete</button>
+      <br>
       <button class="btn btn-sm btn-primary"
               (click)="incrementLikeNotification(product)">
         {{product.nbrLike}} like<3
       </button>
+
       <button class="btn btn-sm btn-warning" id="buy"
               [disabled]="product.quantity==0">
         buy Product

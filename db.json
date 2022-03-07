@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "name": "T-shirt 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias cupiditate deserunt dignissimos dolorem.",
+      "price": 20,
+      "nbrLike": 0,
+      "quantity": 0,
+      "picture": "assets/image/t-shirt1.jpg",
+      "id": 2
+    }
+  ]
+}

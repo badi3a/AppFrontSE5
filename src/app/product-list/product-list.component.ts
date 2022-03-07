@@ -21,7 +21,9 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.title="MyApp Store";
     this.show = false;
-    this.listProduct= this.productService.list;
+    this.productService.getProducts().subscribe(
+      (data)=>this.listProduct= data
+    )
 
     this.stockAlert= this.calcul.getBilan(this.listProduct,'quantity',0);
   }
@@ -38,7 +40,19 @@ export class ProductListComponent implements OnInit {
     this.show = true;
   }
   saveProduct(p:Product){
-    this.listProduct.push(p);
+    //this.listProduct.push(p);
+    this.productService.addProdudct(p).subscribe(
+      ()=>this.listProduct.push(p)
+    )
     this.show=false;
+  }
+
+  delete(product: Product){
+    this.productService.deleteProduct(product.id).subscribe(
+      ()=>{
+        let i= this.listProduct.indexOf(product)
+        this.listProduct.splice(i,1);
+      }
+    )
   }
 }
